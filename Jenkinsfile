@@ -18,6 +18,9 @@ pipeline {
                 # TODO fill out the path to conda here
                 sudo /home/team09/miniconda3/bin/conda init
 
+                # Set CONDA_ENVS_PATH so Jenkins can find the mlip environment
+                export CONDA_ENVS_PATH=/home/team09/.conda/envs
+
                 # TODO Complete the command to run pytest
                 sudo /home/team09/miniconda3/bin/conda run -n mlip pytest
 
